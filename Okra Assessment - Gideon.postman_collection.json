@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "a8d37cf1-13b9-4148-8fab-264441effc77",
+		"name": "Okra Assessment - Gideon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27078994"
+	},
+	"item": [
+		{
+			"name": "Fetch Auth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGE2MzU4MTMwYTk0MzQ4NmYzM2RjZWQiLCJpYXQiOjE2NjI2MjE0MTN9.EflhGhk91iyA_wssscl78-dM7KBfmtQZBfXUa_mv5-E",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"page\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.okra.ng/v2/products/auths",
+					"protocol": "https",
+					"host": [
+						"api",
+						"okra",
+						"ng"
+					],
+					"path": [
+						"v2",
+						"products",
+						"auths"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Identity by date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"page\": 1,\r\n    \"from\": \"2022-10-03\",\r\n    \"to\": \"2022-10-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.okra.ng/v2/identity/getByDate",
+					"protocol": "https",
+					"host": [
+						"api",
+						"okra",
+						"ng"
+					],
+					"path": [
+						"v2",
+						"identity",
+						"getByDate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZGE2MzU4MTMwYTk0MzQ4NmYzM2RjZWQiLCJpYXQiOjE2NzU4NDk5NTR9.DP2dfE9xDXKwviPeMQa6a1_pXkxIa3C8G8kPbg9o1Vk"
+		}
+	]
+}
